@@ -10,7 +10,7 @@ import datetime
 
 # The MongoDB connection info. This assumes your database name is TwitterStream, and your collection name is tweets.
 connection = Connection('localhost', 27017)
-db = connection.nearish
+db = connection.tripstr
 db.tweets.ensure_index("id", unique=True, dropDups=True)
 collection = db.tweets
 

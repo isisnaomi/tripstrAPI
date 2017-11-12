@@ -17,7 +17,7 @@ snippet_user_places = views.UserViewSet.as_view({
 router = routers.DefaultRouter()
 
 ############################
-#######Nearish routes#######
+#######tripstr routes#######
 ############################
 router.register(r'places', views.PlaceViewSet, 'Places'),
 router.register(r'ratedplaces', views.RatedPlaceViewSet, 'RatedPlaces'),

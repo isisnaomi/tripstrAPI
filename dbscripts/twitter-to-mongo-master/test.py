@@ -1,7 +1,7 @@
 from pymongo import Connection
 # The MongoDB connection info. This assumes your database name is TwitterStream, and your collection name is tweets.
 connection = Connection('localhost', 27017)
-db = connection.nearish
+db = connection.tripstr
 keywords = db.place.distinct( "name" )
 print len(keywords)
 for key in keywords:

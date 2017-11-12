@@ -26,7 +26,7 @@ class MongoDBHelper:
 	collection_comments = "comments"
 
 	def __init__(self):
-		self.db_name = 'nearish'
+		self.db_name = 'tripstr'
 		self.db_host = '127.0.0.1'
 		self.db_port = 27017
 		self.db_user = 'isisnaomi'
