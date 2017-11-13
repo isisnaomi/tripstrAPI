@@ -4,12 +4,12 @@ from Place import Place
 from MongoDBHelper import MongoDBHelper
 
 API_KEY = 'AIzaSyAD0mAUNtwC7ihAullxyv6n6zAKPnBgybA'
-RADIUS = 500
+RADIUS = 5000
 
-latitude = 21.021258
-longitude = -89.678835
+latitude = 23.6345
+longitude = 102.5528
 
-limit_longitude_right = -89.566754
+limit_longitude_right = 102.5528
 
 increment_longitude = .007966
 count = 0
@@ -62,9 +62,7 @@ def add_place(data):
 
 
 types = [
-    "restaurant", "bakery", "bar", "cafe", "casino", "convenience_store"
-    , "meal_delivery", "meal_takeaway", "night_club"
-    , "shopping_mall", "store"]
+    "amusement_park", "aquarium","art_gallery","bowling_alley","campground","casino","museum","stadium","zoo"]
 
 
 for type_item in types:
