@@ -23,7 +23,7 @@ def add_place(data):
     results = data['results']
 
     for item in range(0, len(results)):
-        count = count +1
+        count = count + 1
         print(len(results))
         data = Place()
 
@@ -62,26 +62,25 @@ def add_place(data):
 
 
 types = [
-    "amusement_park", "aquarium","art_gallery","bowling_alley","campground","casino","museum","stadium","zoo"]
-
+    "amusement_park", "aquarium", "art_gallery", "bowling_alley", "campground", "casino", "museum", "stadium", "zoo"]
 
 for type_item in types:
     latitude = 21.021258
     longitude = -89.678835
 
     while longitude < limit_longitude_right:
-		#print (latitude)
-		url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + str(latitude) + ',' + str(longitude) + '&radius=' + str(RADIUS) + '&type=' + str(type_item) + '&key=' + str(API_KEY)
-		#print(url)
-		response = requests.get(url)
-		status = response.status_code
-		#print(response.headers['content-type'])
-		if int(status) == 200:
-			data = response.content.decode('utf-8')
+        # print (latitude)
+        url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + str(latitude) + ',' + str(
+            longitude) + '&radius=' + str(RADIUS) + '&type=' + str(type_item) + '&key=' + str(API_KEY)
+        # print(url)
+        response = requests.get(url)
+        status = response.status_code
+        # print(response.headers['content-type'])
+        if int(status) == 200:
+            data = response.content.decode('utf-8')
 
+            data = json.loads(data)
+            if (data['status'] == 'OK'):
+                add_place(data)
 
-			data = json.loads(data)
-			if (data['status'] == 'OK'):
-				add_place(data)
-
-		longitude = float("{0:.6f}".format(longitude + increment_longitude))
+        longitude = float("{0:.6f}".format(longitude + increment_longitude))
