@@ -113,9 +113,6 @@ class UserViewSet(viewsets.ModelViewSet):
 
                     #Rating place according to user
                     userRating = RatedPlace.objects(Q(user_id__exact=userId) & Q(place_id__exact=place.id) )
-                    print userId
-                    print place.id
-                    print userRating
 
                     if userRating:
 
