@@ -4,12 +4,12 @@ from Place import Place
 from MongoDBHelper import MongoDBHelper
 
 API_KEY = 'AIzaSyAD0mAUNtwC7ihAullxyv6n6zAKPnBgybA'
-RADIUS = 5000
+RADIUS = 500
 
-latitude = 23.6345
-longitude = 102.5528
+latitude = 21.021258
+longitude = -89.678835
 
-limit_longitude_right = 102.5528
+limit_longitude_right = -89.566754
 
 increment_longitude = .007966
 count = 0
