@@ -4,10 +4,10 @@ from Place import Place
 from MongoDBHelper import MongoDBHelper
 
 API_KEY = 'AIzaSyC6TuvTx3B3oH2KxPdNCg_ONXSAHoTYRyU'
-RADIUS = 500
+RADIUS = 5000
 
-latitude = 21.021258
-longitude = -89.678835
+latitude = 19.4326
+longitude = -99.1332
 
 limit_longitude_right = -89.566754
 
@@ -62,8 +62,8 @@ types = [
     "amusement_park", "aquarium", "art_gallery", "bowling_alley", "campground", "casino", "museum", "stadium", "zoo"]
 
 for type_item in types:
-    latitude = 21.021258
-    longitude = -89.678835
+    latitude = 19.4326
+    longitude = -99.1332
 
     while longitude < limit_longitude_right:
 

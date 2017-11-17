@@ -22,8 +22,8 @@ class MongoDBHelper:
 	KEY_VICINITY = "vicinity"
 
 
-	collection_places = "places"
-	collection_comments = "comments"
+	collection_places = "place"
+	collection_comments = "comment"
 
 	def __init__(self):
 		self.db_name = 'tripstr'
@@ -48,8 +48,8 @@ class MongoDBHelper:
 		self.KEY_VICINITY = "vicinity"
 
 
-		self.collection_places = "places"
-		self.collection_comments = "comments"
+		self.collection_places = "place"
+		self.collection_comments = "comment"
 		
 
 
